@@ -1,0 +1,20 @@
+<table>
+
+<tr>
+<% count=0 %>
+<% @shoes_gallery.each do |shoe|%>
+
+<% if (count % 4) == 0%>
+</tr>
+<tr>
+<% end %>
+<% count+=1 %>
+<td><%= image_tag shoe.image.url ,:height=>"100",:width=>"100" %><br />
+Name : <%= shoe.product_name %><br />
+Color :<%= shoe.color %><br />
+Brand Name : <%= shoe.brand_name %><br />
+Price : <%= shoe.cost %>
+<%= button_to 'Add to Cart', line_items_path(:store_id => shoe.id) %> </td>
+<% end %>
+</tr>
+</table>

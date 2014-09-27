@@ -1,0 +1,6 @@
+<h1>Welcome to Nellore Shoe Mart</h1>
+
+<% if session[:user] %>
+   <%= link_to "reset password", account_reset_password_path %><br>
+   <%= link_to "logout", :controller=>"account", :action=>"logout" %>
+<% end %>

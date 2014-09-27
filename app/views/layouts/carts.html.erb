@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Cart</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<body>
+
+<% unless session[:user].nil? %>			
+<div class="cl">&nbsp;</div>
+<p id="cart"><span class="profile"> <%= link_to "Reset password" , account_reset_password_path %> or <%= link_to "Account Logout" , account_logout_path %> </span></span></p>
+			
+</div>
+<%else%>
+<div class="cl">&nbsp;</div>
+<p id="cart"><span class="profile"> <%= link_to "sign up" , account_signup_path %> or <%= link_to "Account Login" , account_login_path %> </span></span></p>
+			
+</div>
+<%end%>
+
+<%= yield %>
+
+</body>
+</html>

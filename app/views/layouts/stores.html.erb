@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stores</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+
+<% unless session[:admin].nil? %>				
+<div class="cl">&nbsp;</div>
+<p id="cart"><span class="profile"> <%= link_to "Admin Logout" , admin_logout_path %> </span></span></p>
+			
+</div>
+<% end %>
+
+<body>
+
+<%= yield %>
+
+</body>
+</html>

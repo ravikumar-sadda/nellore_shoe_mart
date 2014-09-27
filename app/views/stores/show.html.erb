@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Shoe image:</b>
+  <%= image_tag @store.image.url(:medium) %>
+</p>
+<p>
+  <strong>Product name:</strong>
+  <%= @store.product_name %>
+</p>
+
+<p>
+  <strong>Brand name:</strong>
+  <%= @store.brand_name %>
+</p>
+
+<p>
+  <strong>Cost:</strong>
+  <%= @store.cost %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @store.description %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @store.color %>
+</p>
+
+<p>
+  <strong>Feature 1:</strong>
+  <%= @store.feature_1 %>
+</p>
+
+<p>
+  <strong>Feature 2:</strong>
+  <%= @store.feature_2 %>
+</p>
+
+<%= link_to 'Edit', edit_store_path(@store) %> |
+<%= link_to 'Back', stores_path %>
